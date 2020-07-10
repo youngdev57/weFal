@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">wefal</string>
+    <string name="join_title">WeFal.</string>
+    <string name="join_id_label">ID</string>
+    <string name="join_pwd_label">PWD</string>
+    <string name="join_pwdCheck_label">PWD CHECK</string>
+    <string name="join_checkBox_label">개인정보 수집</string>
+    <string name="join_button_label">JOIN</string>
 </resources>
