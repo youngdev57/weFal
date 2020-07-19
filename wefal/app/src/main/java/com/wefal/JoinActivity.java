@@ -55,7 +55,8 @@ public class JoinActivity extends AppCompatActivity {
                     return;
                 }
 
-                if(!Pattern.matches("^(?=.*\\d)(?=.*[~`!@#$%\\^&*()-])(?=.*[a-zA-Z]).{8,20}$", pwd))
+                //^(?=.*\d)(?=.*[~`!@#$%\^&*()-])(?=.*[a-zA-Z]).{8,20}$
+                if(!Pattern.matches("^(?=.*\\d)(?=.*[a-zA-Z]).{8,20}$", pwd))
                 {
                     Toast.makeText(getApplicationContext(),"비밀번호 형식을 지켜주세요.",Toast.LENGTH_SHORT).show();
                     return;
@@ -120,14 +121,13 @@ public class JoinActivity extends AppCompatActivity {
                     sb.append(line);
                 }
 
-
                 bufferedReader.close();
                 inputStreamReader.close();
                 inputStream.close();
                 httpURLConnection.disconnect();
 
 
-                System.out.println(sb.toString());
+                System.out.println("받은 문자열 : " + sb.toString());
                 return sb.toString();
 
             } catch (Exception e) {
