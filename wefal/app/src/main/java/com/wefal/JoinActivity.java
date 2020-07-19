@@ -15,12 +15,13 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.regex.Pattern;
 
 public class JoinActivity extends AppCompatActivity {
     Button join_btn = null;
-    EditText join_email = null, join_pwd = null;
+    EditText join_email = null, join_pwd = null, join_pwd_check = null;
 
-    String email = "", pwd = "";
+    String email = "", pwd = "", pwd_check = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,15 +31,36 @@ public class JoinActivity extends AppCompatActivity {
         join_btn = findViewById(R.id.join_btn);
         join_email = findViewById(R.id.join_email_editText);
         join_pwd = findViewById(R.id.join_pwd_editText);
+        join_pwd_check = findViewById(R.id.join_pwdCheck_editText);
 
         join_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 email = join_email.getText().toString();
                 pwd = join_pwd.getText().toString();
+                pwd_check = join_pwd_check.getText().toString();
 
-                System.out.println(email + "**********************");
-                System.out.println(pwd + "**********************");
+                //유효성 검사
+
+                //이메일 유효성 검사
+                if(!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches())
+                {
+                    Toast.makeText(getApplicationContext(),"이메일 형식이 아닙니다",Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                //비밀번호와 비밀번호 확인 일치 여부 검사
+                if(!pwd.equals(pwd_check)) {
+                    Toast.makeText(getApplicationContext(),"비밀번호가 일치하지 않습니다",Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                if(!Pattern.matches("^(?=.*\\d)(?=.*[~`!@#$%\\^&*()-])(?=.*[a-zA-Z]).{8,20}$", pwd))
+                {
+                    Toast.makeText(getApplicationContext(),"비밀번호 형식을 지켜주세요.",Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
                 InsertData task = new InsertData();
                 task.execute("http://missing.dothome.co.kr/wefal/user/insertUser.php", email, pwd);
                 Toast.makeText(getApplicationContext(), "전송 후 결과 받음", Toast.LENGTH_SHORT).show();
