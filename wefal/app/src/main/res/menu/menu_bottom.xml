@@ -2,23 +2,23 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/navigation_menu1"
+        android:id="@+id/trade_list"
         android:icon="@android:drawable/ic_menu_call"
-        android:title="MENU1" />
+        android:title="TRADE LIST" />
 
     <item
-        android:id="@+id/navigation_menu2"
+        android:id="@+id/add_trade"
         android:icon="@android:drawable/ic_menu_camera"
-        android:title="MENU2" />
+        android:title="ADD TRADE" />
 
     <item
-        android:id="@+id/navigation_menu3"
+        android:id="@+id/chat_list"
         android:icon="@android:drawable/ic_menu_edit"
-        android:title="MENU3" />
+        android:title="CHAT LIST" />
 
     <item
-        android:id="@+id/navigation_menu4"
+        android:id="@+id/mypage"
         android:icon="@android:drawable/ic_menu_help"
-        android:title="MENU3" />
+        android:title="MYPAGE" />
 
 </menu>

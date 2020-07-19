@@ -14,7 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".MypageActivity"></activity>
+        <activity android:name=".TradeListActivity"></activity>
+        <activity android:name=".MypageActivity" />
         <activity android:name=".ChatListActivity" />
         <activity android:name=".AddTradeActivity" />
         <activity android:name=".JoinActivity">
