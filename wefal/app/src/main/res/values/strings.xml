@@ -3,8 +3,8 @@
 
     <!--조인-->
     <string name="join_title">WeFal.</string>
-    <string name="join_email_label">EMAIL</string>
-    <string name="join_pwd_label">PWD</string>
+    <string name="email_label">EMAIL</string>
+    <string name="pwd_label">PWD</string>
     <string name="join_pwdCheck_label">PWD CHECK</string>
     <string name="join_checkBox_label">개인정보 수집</string>
     <string name="join_button_label">JOIN</string>
@@ -15,6 +15,7 @@
     <string name="join_notification_fail">비밀번호를 확인해주세요</string>
 
     <!--조인-->
-    <string name="login_email_label">비밀번호를 확인해주세요</string>
+    <string name="login_pwd_hint">비밀번호를 입력해주세요</string>
+    <string name="login_btn">LOGIN</string>
 
 </resources>

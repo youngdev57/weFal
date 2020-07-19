@@ -24,7 +24,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center|center_vertical"
-            android:text="@string/join_email_label"
+            android:text="@string/email_label"
             android:textSize="24sp" />
 
         <EditText
@@ -51,7 +51,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center|center_vertical"
-            android:text="@string/join_pwd_label"
+            android:text="@string/pwd_label"
             android:textSize="24sp" />
 
         <EditText

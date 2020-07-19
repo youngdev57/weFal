@@ -18,7 +18,9 @@
         <activity android:name=".MypageActivity" />
         <activity android:name=".ChatListActivity" />
         <activity android:name=".AddTradeActivity" />
-        <activity android:name=".JoinActivity" />
+        <activity android:name=".JoinActivity" >
+
+        </activity>
         <activity android:name=".MainActivity" />
         <activity android:name=".LoginActivity">
             <intent-filter>
