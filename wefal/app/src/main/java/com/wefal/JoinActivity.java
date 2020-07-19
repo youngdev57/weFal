@@ -28,7 +28,7 @@ public class JoinActivity extends AppCompatActivity {
         setContentView(R.layout.activity_join);
 
         join_btn = findViewById(R.id.join_btn);
-        join_email = findViewById(R.id.join_id_editText);
+        join_email = findViewById(R.id.join_email_editText);
         join_pwd = findViewById(R.id.join_pwd_editText);
 
         join_btn.setOnClickListener(new View.OnClickListener() {
@@ -40,7 +40,7 @@ public class JoinActivity extends AppCompatActivity {
                 System.out.println(email + "**********************");
                 System.out.println(pwd + "**********************");
                 InsertData task = new InsertData();
-                task.execute("http://missing.dothome.co.kr/wefal/insertUser.php", email, pwd);
+                task.execute("http://missing.dothome.co.kr/wefal/user/insertUser.php", email, pwd);
                 Toast.makeText(getApplicationContext(), "전송 후 결과 받음", Toast.LENGTH_SHORT).show();
             }
         });
@@ -100,6 +100,9 @@ public class JoinActivity extends AppCompatActivity {
 
 
                 bufferedReader.close();
+                inputStreamReader.close();
+                inputStream.close();
+                httpURLConnection.disconnect();
 
 
                 System.out.println(sb.toString());
